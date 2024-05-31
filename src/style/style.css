@@ -1,8 +1,50 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+    margin: 0;
+}
+
 img {
     max-width: 100%;
+}
+
+.main {
+    height: 100vh;
+    background-color: antiquewhite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbox {
+    margin-bottom: 15px;
+
+}
+
+.fa-search {
+    background-color: rgba(0,0,0,1);
+    -webkit-mask-image: url("../images/magnify.svg");
+    mask-image: url("../images/magnify.svg");
+    mask-repeat: no-repeat;
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content {
+    height: 80vh;
+    width: 80%;
+
+    background-color: white;
 }
 
 .footer {

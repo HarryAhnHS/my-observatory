@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Weather</title>
 </head>
 <body>
+    <div class="main">
+        <div class="header">
+
+        </div>
+        <div class="searchbox">
+            <input id="search-input" type="text" placeholder="search" required>
+            <button id="submit" type="submit">
+                <i class="fa-search"></i>
+            </button>
+        </div>
+        <div class="content">
+            <div class="meta">
+                <div class="location">
+                    <div class="city">
+                        Hong Kong
+                    </div>
+                    <div class="country">
+                        Hong Kong
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="day">Monday</div>
+                    <div class="time">Last Updated 11:45pm</div>
+                </div>
+            </div>
+            <div class="overview">
+                <div class="icon">?</div>
+                <div class="temperature">
+                    <div id="current-temp">27</div>
+                    <div class="toggle">
+                        <div id="metric">C&deg;</div>
+                        <p>|</p>
+                        <div id="imperial">F&deg;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="feelsLike">
+                    <div class="icon feels">
+                        
+                    </div>
+                    <div class="card feels">
+                        <div class="stat feels">19</div>
+                        <div class="title feels">Feels like</div>
+                    </div>
+                </div>
+                <div class="humidity">
+                    <div class="icon humidity">
+                        
+                    </div>
+                    <div class="card humidity">
+                        <div class="stat humidity">70%</div>
+                        <div class="title feels">Humidity</div>
+                    </div>
+                </div>
+                <div class="wind">
+                    <div class="wind-direction">
+                        <div class="degree">30&deg;</div>
+                        <div class="direction">N</div>
+                    </div>
+                    <div class="card wind">
+                        <div class="stat wind">12 kmh</div>
+                        <div class="title wind">Wind</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         &copy; Copyright by @HarryAhnHS 
         <a href="https://github.com/HarryAhnHS" class="github-a" target="_blank">

@@ -1,7 +1,7 @@
 {
-  "name": "blank",
+  "name": "weatherapp",
   "version": "1.0.0",
-  "description": "Blank",
+  "description": "Using Weather API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,5 +28,6 @@
   },
   "dependencies": {
     "date-fns": "^3.6.0"
-  }
+  },
+  "keywords": []
 }

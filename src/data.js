@@ -44,6 +44,28 @@ async function getWeatherData(query) {
     }
 }
 
+function displayCurrentCity() {
+    try {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            console.log("Geolocation is not supported by this browser.");
+            getWeatherData('London');
+        }
+        function showPosition(position) {
+            getWeatherData(`${position.coords.latitude},${position.coords.longitude}`); 
+        }
+    }
+    catch (error) {
+        console.log(error);
+        getWeatherData('London');
+    }
+
+}
 
 
-export default getWeatherData;
+
+export {
+    getWeatherData,
+    displayCurrentCity
+};

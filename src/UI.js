@@ -77,7 +77,7 @@ const UI = (() => {
 
     function dayNight(forecast) {
         if (forecast.isDay) {
-            document.querySelector(".main").style['background-color'] = "#00a9a5";
+            document.querySelector(".main").style['background-color'] = "#00a6ed";
 
             document.querySelector(".searchbox").style['background-color'] = "white";
 

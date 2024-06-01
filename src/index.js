@@ -1,7 +1,7 @@
 import './style/style.css';
 import Git from './images/github.png';
 
-import getWeatherData from './data.js';
+import {getWeatherData, displayCurrentCity} from './data.js';
 
 document.getElementById("github").src = Git; // Fill github logo
 
@@ -9,7 +9,8 @@ document.getElementById("github").src = Git; // Fill github logo
 const submit = document.querySelector("#submit");
 const query = document.querySelector("#search-input");
 
-getWeatherData("Seoul");
+// Geolocation API to display current city's weather
+displayCurrentCity();
 
 submit.onclick = (e) => {
     e.preventDefault();

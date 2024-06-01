@@ -43,6 +43,7 @@ const UI = (() => {
         arrow.style['transform'] = `rotate(${forecast.wind.degree}deg)`;
 
         toggleSystem(forecast);
+        dayNight(forecast);
     }
 
     function toggleSystem(forecast) {
@@ -74,9 +75,43 @@ const UI = (() => {
         })
     }
 
+    function dayNight(forecast) {
+        if (forecast.isDay) {
+            document.querySelector(".main").style['background-color'] = "#00a9a5";
+
+            document.querySelector(".searchbox").style['background-color'] = "white";
+
+            document.querySelector("#search-input").style['color'] = "black";
+            document.querySelector("#search-input").classList.remove("dark");
+
+            document.querySelector(".content").style['background-color'] = "white";
+
+            document.querySelector(".content").style['color'] = "black";
+            document.querySelectorAll(".icon").forEach((icon) => {
+                icon.style['background-color'] = "black";
+            })
+        }
+        else {
+            document.querySelector(".main").style['background-color'] = "#0b132b";
+
+            document.querySelector(".searchbox").style['background-color'] = "#1c2541";
+
+            document.querySelector("#search-input").style['color'] = "white";
+            document.querySelector("#search-input").classList.add("dark");
+
+            document.querySelector(".content").style['background-color'] = "#1c2541";
+
+            document.querySelector(".content").style['color'] = "white";
+            document.querySelectorAll(".icon").forEach((icon) => {
+                icon.style['background-color'] = "white";
+            })
+        };
+    }
+
     return {
         displayContent,
-        toggleSystem
+        toggleSystem,
+        dayNight
     }
 })();
 

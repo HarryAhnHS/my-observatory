@@ -5,9 +5,9 @@ async function getWeatherData(query) {
     document.querySelector(".loader").style['display'] = 'flex';
     document.querySelector(".content").style['display'] = 'none';
 
-
     const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=4654305166924c618b855220243005&q=${query}`);
     const data = await response.json();
+
 
     document.querySelector(".loader").style['display'] = 'none';
     document.querySelector(".content").style['display'] = 'flex';
@@ -52,7 +52,7 @@ function displayCurrentCity() {
         // Loader prior to response
         document.querySelector(".loader").style['display'] = 'flex';
         document.querySelector(".content").style['display'] = 'none';
-        
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         } else {

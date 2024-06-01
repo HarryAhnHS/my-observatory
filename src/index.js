@@ -1,9 +1,13 @@
 import './style/style.css';
+
 import Git from './images/github.png';
+
+import Fav from './images/favicon.png';
 
 import {getWeatherData, displayCurrentCity} from './data.js';
 
 document.getElementById("github").src = Git; // Fill github logo
+document.querySelector('#favicon').setAttribute('href', Fav); // Favicon
 
 // const form = document.querySelector(".searchbox");
 const submit = document.querySelector("#submit");
@@ -19,6 +23,7 @@ submit.onclick = (e) => {
     if (query.value != "") {
         getWeatherData(query.value).catch((error) => {
             console.log(error);
+            query.value = "";
         });
     }
 };
@@ -29,6 +34,7 @@ query.addEventListener("keypress", (e) => {
         if (query.value != "") {
             getWeatherData(query.value).catch((error) => {
                 console.log(error);
+                query.value = "";
             });
         }
         document.activeElement.blur();
@@ -39,9 +45,6 @@ currentLocation.onclick = (e) => {
     e.preventDefault();
     query.value = "";
     displayCurrentCity();
-
-    
-
     document.activeElement.blur();
 }
 

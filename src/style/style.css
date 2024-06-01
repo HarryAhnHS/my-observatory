@@ -401,7 +401,6 @@ img {
     margin-right: 5px;
 }
 
-
 .footer {
     font-family: 'Urbanist', sans-serif;
 
@@ -440,6 +439,10 @@ img {
 @media only screen and (max-width: 900px) {
     .meta {
         flex-direction: column;
+    }
+
+    .searchbox {
+        margin-top: 25px;
     }
 
     .temporal {

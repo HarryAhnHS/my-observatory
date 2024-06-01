@@ -5,7 +5,9 @@ async function getWeatherData(query) {
     document.querySelector(".loader").style['display'] = 'flex';
     document.querySelector(".content").style['display'] = 'none';
 
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=4654305166924c618b855220243005&q=${query}`);
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=4654305166924c618b855220243005&q=${query}`, {
+        mode: 'cors',
+    });
     const data = await response.json();
 
     document.querySelector(".loader").style['display'] = 'none';
@@ -57,20 +59,28 @@ function displayCurrentCity() {
         } else {
             console.log("Geolocation is not supported by this browser.");
             getWeatherData('London');
+            
+            document.querySelector(".foot-controls").style.display = 'none';
         }
         function showPosition(position) {
             console.log(position);
             getWeatherData(`${position.coords.latitude},${position.coords.longitude}`); 
-        }
 
+            document.querySelector(".foot-controls").style.display = 'flex';
+            document.querySelector(".disabled-err").style.display = 'none';
+            document.querySelector("#current-loc").classList.remove("disabled");
+        }
         function errorCallback() {
             console.log("Disallowed location services");
             getWeatherData('London');
+
+            document.querySelector(".foot-controls").style.display = 'flex';
+            document.querySelector(".disabled-err").style.display = 'block';
+            document.querySelector("#current-loc").classList.add("disabled");
         }
     }
     catch (error) {
         console.log(error);
-        getWeatherData('London');
     }
 }
 

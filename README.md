@@ -9,4 +9,5 @@ Link to live: https://harryahnhs.github.io/my-observatory/
 - Error handle location services
 - Imperial and metric system toggle function
 - Day/night changes in UI color scheme
-- Loader between calls and asynchronous processing 
+- Loader between calls and asynchronous processing
+- 'date-fns' module for local time zone

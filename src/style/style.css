@@ -1,8 +1,10 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 img {
@@ -21,7 +23,6 @@ img {
 
 .searchbox {
     margin-bottom: 15px;
-
 }
 
 .fa-search {
@@ -41,11 +42,167 @@ img {
 
 
 .content {
-    height: 80vh;
-    width: 80%;
+    height: 50vh;
+    width: 50%;
 
     background-color: white;
+
+    display: flex;
+    flex-direction: column;
 }
+
+.meta {
+    display: flex;
+}
+
+.location {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.city {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.country {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.temporal {
+    padding-right: 5px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+}
+
+.day {
+    font-size: 24px;
+}
+
+.time {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.overview {
+    display: flex;
+    justify-content: center;
+
+    height: 100px;
+}
+
+.overview-icon {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.temperature {
+    display: flex;
+    align-items: baseline;
+}
+
+.current-temp {
+    font-size: 64px;
+}
+
+.toggle {
+    display: flex;
+    font-size: 24px;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+
+
+    font-size: 24px;
+
+    margin-left: 15px;
+
+}
+
+.stats {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.card {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 100px;
+    width: 30%;
+
+    padding-left: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icons */
+.icon.feels {
+    background-color: rgba(0,0,0,1);
+    -webkit-mask-image: url("../images/feelslike.svg");
+    mask-image: url("../images/feelslike.svg");
+    mask-repeat: no-repeat;
+
+    display: inline-block;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon.humidity {
+    background-color: rgba(0,0,0,1);
+    -webkit-mask-image: url("../images/humidity.svg");
+    mask-image: url("../images/humidity.svg");
+    mask-repeat: no-repeat;
+
+    display: inline-block;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.info {
+    padding-left: 5px;
+}
+
+.stat {
+    font-size: 18px;
+}
+
+.title {
+    font-size: 12px;
+}
+
 
 .footer {
     font-family: 'Urbanist', sans-serif;

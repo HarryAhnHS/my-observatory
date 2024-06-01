@@ -13,7 +13,7 @@ img {
 
 .main {
     height: 100vh;
-    background-color: #243e36;
+    background-color: #00a6ed;
 
     display: flex;
     flex-direction: column;
@@ -90,6 +90,26 @@ img {
     margin: 0;
 }
 
+.loader {
+    display: none;
+
+    height: 50vh;
+    width: 50%;
+    min-width: 410px;
+
+    font-size: 32px;
+
+    background-color: white;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .content {
     width: 50%;
     min-width: 410px;
@@ -128,7 +148,7 @@ img {
 
 .country {
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 300;
 
     margin-left: 5px;
 }
@@ -149,7 +169,7 @@ img {
 
 .time {
     font-size: 12px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .overview {
@@ -308,6 +328,49 @@ img {
     font-size: 12px;
 
     font-weight: 200;
+}
+
+/* Foot controls*/
+.foot-controls {
+    margin-top: 50px;
+}
+
+#current-loc {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+
+#current-loc:hover, #current-loc:focus {
+    transform: translateY(-5px);
+}
+
+#current-loc:active {
+    transform: translateY(5px);
+}
+
+.icon.loc {
+    background-color: rgba(0,0,0,1);
+    -webkit-mask-image: url("../images/location.svg");
+    mask-image: url("../images/location.svg");
+    mask-repeat: no-repeat;
+
+    width: 25px;
+    height: 25px;
+
+    margin: 0;
+    margin-right: 5px;
 }
 
 

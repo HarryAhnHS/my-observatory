@@ -2,7 +2,10 @@ import {format} from "date-fns";
 
 const UI = (() => {
     function displayContent(forecast) {
-        // UI
+        // Defaults
+        document.querySelector("#metric").classList.add("active");
+        document.querySelector("#imperial").classList.remove("active");
+
         const city = document.querySelector(".city");
         const country = document.querySelector(".country");
     
@@ -79,6 +82,9 @@ const UI = (() => {
         if (forecast.isDay) {
             document.querySelector(".main").style['background-color'] = "#00a6ed";
 
+            document.querySelector(".loader").style['background-color'] = "white";
+            document.querySelector(".loader").style['color'] = "black";
+
             document.querySelector(".searchbox").style['background-color'] = "white";
 
             document.querySelector("#search-input").style['color'] = "black";
@@ -90,9 +96,16 @@ const UI = (() => {
             document.querySelectorAll(".icon").forEach((icon) => {
                 icon.style['background-color'] = "black";
             })
+
+            document.querySelector("#current-loc").style['background-color'] = "white";
+            document.querySelector("#current-loc").style['color'] = "black";
+
         }
         else {
             document.querySelector(".main").style['background-color'] = "#0b132b";
+
+            document.querySelector(".loader").style['background-color'] = "#1c2541";
+            document.querySelector(".loader").style['color'] = "white";
 
             document.querySelector(".searchbox").style['background-color'] = "#1c2541";
 
@@ -105,6 +118,9 @@ const UI = (() => {
             document.querySelectorAll(".icon").forEach((icon) => {
                 icon.style['background-color'] = "white";
             })
+
+            document.querySelector("#current-loc").style['background-color'] = "#1c2541"
+            document.querySelector("#current-loc").style['color'] = "white";
         };
     }
 

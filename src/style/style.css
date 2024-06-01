@@ -346,7 +346,7 @@ img {
 .disabled-err {
     font-size: 12px;
     font-weight: 400;
-    color: red;
+    color: #ef233c;
     margin-top: 15px;
 
     display: none;

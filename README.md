@@ -1,5 +1,5 @@
-# My Observatory
-Simple weather app using Weather API
+# MyObservatory
+Simple weather app using WeatherAPI
 
 Link to live: https://harryahnhs.github.io/my-observatory/
 

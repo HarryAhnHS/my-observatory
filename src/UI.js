@@ -35,7 +35,7 @@ const UI = (() => {
         humidity.textContent = `${forecast.humidity} %`;
         windSpeed.textContent = `${forecast.wind.speed.kph} kph`;
     
-        degree.textContent = forecast.wind.degree;
+        degree.textContent = `${forecast.wind.degree}°`;
         direction.textContent = forecast.wind.direction;
     
         // Rotate arrow by wind degree

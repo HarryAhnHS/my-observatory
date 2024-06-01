@@ -13,7 +13,7 @@ img {
 
 .main {
     height: 100vh;
-    background-color: antiquewhite;
+    background-color: #243e36;
 
     display: flex;
     flex-direction: column;
@@ -22,7 +22,43 @@ img {
 }
 
 .searchbox {
-    margin-bottom: 15px;
+    height: 40px;
+    width: 50%;
+
+    display: flex;
+
+    background-color: white;
+}
+
+#search-input {
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: transparent;
+    flex: 1;
+
+    margin: 0;
+
+    border: none;
+
+    font-size: 16px;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#submit {
+    background-color: transparent;
+    width: 50px;
+
+    border: none;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
 }
 
 .fa-search {
@@ -40,26 +76,28 @@ img {
     justify-content: center;
 }
 
-
 .content {
-    padding-bottom: 15px;
     width: 50%;
 
     background-color: white;
 
     display: flex;
     flex-direction: column;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .meta {
     display: flex;
 
     padding-top: 5px;
-    padding-bottom: 5px;
 }
 
 .location {
-    padding-left: 5px;
+    padding-left: 15px;
 
     display: flex;
     flex-direction: column;
@@ -75,12 +113,14 @@ img {
 .country {
     font-size: 24px;
     font-weight: 200;
+
+    margin-left: 5px;
 }
 
 .temporal {
-    padding-right: 10px;
+    padding-right: 15px;
     padding-bottom: 15px;
-    padding-top: 15px;
+    padding-top: 5px;
 
     display: flex;
     flex-direction: column;
@@ -102,8 +142,6 @@ img {
     justify-content: center;
 
     height: 80px;
-
-    padding-bottom: 15px;
 }
 
 .overview-icon {
@@ -135,7 +173,6 @@ img {
 
 #imperial, #metric {
     cursor: pointer;
-    
 }
 
 /* toggle active states */
@@ -148,25 +185,34 @@ img {
     align-items: center;
     justify-content: center;
 
+    margin-left: 15px;
 
-    font-size: 20px;
+
+    font-size: 18px;
 }
 
 .stats {
     flex: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 
 .card {
     border-radius: 5px;
-    border: 1px solid black;
+
+    background-color: rgba(0, 0, 0, 0.04);
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+    box-sizing: border-box;
     height: 100px;
     width: 30%;
-
-    /* padding-left: 15px; */
 
     display: flex;
     align-items: center;
@@ -174,7 +220,8 @@ img {
 }
 
 .wind-direction {
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,7 +268,7 @@ img {
 }
 
 .degree, .direction {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
 }
 

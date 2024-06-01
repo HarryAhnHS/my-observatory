@@ -42,7 +42,6 @@ async function getWeatherData(query) {
     catch (error) {
         console.log(error);
     }
-    
 }
 
 

@@ -10,12 +10,12 @@
         <div class="header">
 
         </div>
-        <div class="searchbox">
-            <input id="search-input" type="text" placeholder="search" required>
+        <form class="searchbox" novalidate>
             <button id="submit" type="submit">
                 <i class="fa-search"></i>
             </button>
-        </div>
+            <input id="search-input" type="text" placeholder="Search..." required>
+        </form>
         <div class="content">
             <div class="meta">
                 <div class="location">
@@ -30,11 +30,7 @@
                     <div class="time"></div>
                 </div>
             </div>
-            <div class="summary">
-
-            </div>
             <div class="overview">
-
                 <div class="overview-icon">
                     <img>
                 </div>
@@ -46,6 +42,8 @@
                         <div id="imperial">F&deg;</div>
                     </div>
                 </div>
+            </div>
+            <div class="summary">
 
             </div>
             <div class="stats">

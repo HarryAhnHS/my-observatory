@@ -24,6 +24,8 @@ img {
 }
 
 .searchbox {
+    margin-top: 50px;
+
     padding-top: 15px;
     padding-bottom: 5px;
 
@@ -199,7 +201,7 @@ img {
 }
 
 .current-temp {
-    font-size: 64px;
+    font-size: 72px;
 }
 
 .toggle {
@@ -237,6 +239,9 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 
@@ -325,7 +330,7 @@ img {
 }
 
 .stat {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .title {
@@ -432,7 +437,7 @@ img {
 
 /* Mobile media query*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .meta {
         flex-direction: column;
     }

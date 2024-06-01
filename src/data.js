@@ -1,5 +1,5 @@
-import displayContent from "./UI";
-// API calls
+import UI from "./UI";
+// API call here
 async function getWeatherData(query) {
     try {
         const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=4654305166924c618b855220243005&q=${query}`);
@@ -36,7 +36,7 @@ async function getWeatherData(query) {
         },
         humidity: data.current.humidity
         }
-        displayContent(forecast);
+        UI.displayContent(forecast);
         return forecast;
     }
     catch (error) {

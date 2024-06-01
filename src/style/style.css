@@ -203,7 +203,7 @@ img {
 }
 
 .toggle {
-    margin-left: 15px; 
+    margin-left: 20px; 
     margin-bottom: 10px;
     display: flex;
     align-items: flex-start;
@@ -428,4 +428,49 @@ img {
 .github-a img:hover {
     opacity: 1;
     transform: rotate(360deg) scale(1.1);
+}
+
+/* Mobile media query*/
+
+@media only screen and (max-width: 800px) {
+    .meta {
+        flex-direction: column;
+    }
+
+    .temporal {
+        padding-left: 20px;
+        padding-top: 20px;
+        align-items: flex-start;
+    }
+
+    .stats {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        margin: 0;
+        margin-top: 15px;
+
+        width: 90%;
+        height: 70px;
+    }
+
+    .stat {
+        font-size: 24px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .main {
+        height: auto;
+
+        padding: 50px;
+    }
+
+
 }

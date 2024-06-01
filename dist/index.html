@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <link id="favicon" rel="icon" type="image/png">
+    <title>MyObservatory</title>
 <script defer src="main.js"></script></head>
 <body>
     <div class="main">
-        <div class="header">
-
-        </div>
-        <div class="searchbox">
-            <input id="search-input" type="text" placeholder="search" required>
+        <form class="searchbox" novalidate>
             <button id="submit" type="submit">
-                <i class="fa-search"></i>
+                <i class="icon fa-search"></i>
             </button>
+            <input id="search-input" type="text" placeholder='Search...' required>
+        </form>
+        <div class="loader">
+            Loading...
         </div>
         <div class="content">
             <div class="meta">
@@ -30,11 +31,7 @@
                     <div class="time"></div>
                 </div>
             </div>
-            <div class="summary">
-
-            </div>
             <div class="overview">
-
                 <div class="overview-icon">
                     <img>
                 </div>
@@ -46,6 +43,8 @@
                         <div id="imperial">F&deg;</div>
                     </div>
                 </div>
+            </div>
+            <div class="summary">
 
             </div>
             <div class="stats">
@@ -80,6 +79,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="foot-controls">
+            <button id="current-loc">
+                <i class="icon loc"></i>
+                <div>Current Location</div>
+            </button>
         </div>
     </div>
     <div class="footer">

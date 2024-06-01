@@ -11,3 +11,4 @@ Link to live: https://harryahnhs.github.io/my-observatory/
 - Day/night changes in UI color scheme
 - Loader between calls and asynchronous processing
 - 'date-fns' module for local time zone
+- 100% mobile responsive
